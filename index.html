@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pseudo-class selectors</title>
+    <title>Pseudo-Class Selectors Example</title>
     <meta charset="utf-8">
-
-    <link rel="stylesheet" href="styles/normalize.css">
 
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 87.5%;
-            margin: 2em;
+            font-size: 90%;
+            background-color: #f0f8ff;
+            margin: 40px;
+            color: #333;
         }
 
-        /* TODO 1: Make all hyperlinks bold */
-        
+        main {
+            width: 600px;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #4682b4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
 
-        /* TODO 2: Make unvisited links green */
-        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
 
-        /* TODO 3: Make links fuchsia when mouse is over them
-           or when they receive keyboard focus */
-        
+        a {
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-        /* TODO 4: Make the first paragraph inside <main> bold */
-        
+        a:link {
+            color: #006400;
+        }
 
-        /* TODO 5: Make the first letter of the first paragraph
-           150% larger */
-        
+        a:visited {
+            color: #8b008b;
+        }
+
+        a:hover,
+        a:focus {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+
+        main p:first-child {
+            font-weight: bold;
+            color: #1e90ff;
+        }
+
+        main p:first-child::first-letter {
+            font-size: 180%;
+            color: red;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        li:hover {
+            background-color: #e6f7ff;
+        }
     </style>
 </head>
 
@@ -36,22 +70,20 @@
 
 <main>
 
-    <p>Welcome to San Joaquin Valley Town Hall.</p>
+    <h1>Technology Seminar</h1>
 
-    <p>We have some fascinating speakers for you this season!</p>
+    <p>
+        Welcome to our annual technology seminar event.
+    </p>
+
+    <p>
+        We have many expert speakers sharing their knowledge about modern technology.
+    </p>
 
     <ul>
-        <li>
-            <a href="speakers/toobin.html">Jeffrey Toobin</a>
-        </li>
-
-        <li>
-            <a href="speakers/sorkin.html">Andrew Ross Sorkin</a>
-        </li>
-
-        <li>
-            <a href="speakers/chua.html">Amy Chua</a>
-        </li>
+        <li><a href="speakers/ai.html">Artificial Intelligence Speaker</a></li>
+        <li><a href="speakers/web.html">Web Development Speaker</a></li>
+        <li><a href="speakers/cloud.html">Cloud Computing Speaker</a></li>
     </ul>
 
 </main>
